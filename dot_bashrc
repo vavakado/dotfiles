@@ -9,6 +9,8 @@
 # alias grep='grep --color=auto'
 export HELIX_RUNTIME=~/src/helix/runtime
 # PS1='[\u@\h \W]\$ '
+alias ua-update-all='sudo pacman -Sy && sudo powerpill -Su && yay -Su'
+export EDITOR=hx
 
 # Automatically added by the Guix install script.
 if [ -n "$GUIX_ENVIRONMENT" ]; then
