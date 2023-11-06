@@ -16,6 +16,7 @@ riverctl input pointer-1267-12351-ELAN0511:01_04F3:303F_Touchpad tap-button-map 
 swww init
 riverctl keyboard-layout -variant ,colemak, -options grp:win_space_toggle us,us,ru
 riverctl spawn waybar
+riverctl spawn blueman-applet
 
 riverctl focus-follows-cursor normal
 
