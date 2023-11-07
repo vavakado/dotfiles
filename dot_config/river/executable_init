@@ -18,6 +18,8 @@ riverctl keyboard-layout -variant ,colemak, -options grp:win_space_toggle us,us,
 riverctl spawn waybar
 riverctl spawn blueman-applet
 
+riverctl map normal None Print spawn ~/.config/river/scripts/scrs.bash
+riverctl map normal Shift Print spawn ~/.config/river/scripts/scrsz.bash
 riverctl focus-follows-cursor normal
 
 # Super+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
