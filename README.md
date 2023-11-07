@@ -7,6 +7,6 @@
 ##### Editor: helix
 ###### foo: bar
 
-[[!screenshots/22.58.webp]]
-[[!screenshots/23.00.webp]]
-[[!screenshots/23.03.webp]]
+![image info](./screenshots/22.58.webp)
+![image info](./screenshots/23.00.webp)
+![image info](./screenshots/23.03.webp)
