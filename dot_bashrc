@@ -1,0 +1,14 @@
+eval "$(starship init bash)"
+eval "$(zoxide init bash)"
+
+alias "v"="nvim"
+alias ".."="cd .."
+alias ls="eza --icons"
+alias la="eza --icons --all"
+alias ll="eza --icons --long"
+
+
+export PATH="$HOME/.node_modules_global/bin:$PATH"
+export EDITOR="nvim"
+
+alias che="chezmoi edit"
