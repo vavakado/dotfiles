@@ -11,4 +11,6 @@ alias ll="eza --icons --long"
 export PATH="$HOME/.node_modules_global/bin:$PATH"
 export EDITOR="nvim"
 
+source /usr/share/doc/pkgfile/command-not-found.bash
+
 alias che="chezmoi edit"
