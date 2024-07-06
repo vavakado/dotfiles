@@ -8,6 +8,7 @@ if status is-interactive
 	alias ll="eza --icons --long"
 
 	export PATH="$HOME/.node_modules_global/bin:$PATH"
+	fish_add_path -p ~/.cargo/bin ~/.local/bin/
 	export EDITOR="nvim"
 
 	starship init fish | source
