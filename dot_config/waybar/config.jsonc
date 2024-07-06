@@ -13,12 +13,10 @@
   "modules-center": ["hyprland/workspaces"],
   "modules-right": ["tray", "hyprland/language", "pulseaudio"],
   "reload_style_on_change": true,
-
   "custom/logo": {
-    "format": "",
+    "format": "󰣇",
     "tooltip": false,
   },
-
   "hyprland/workspaces": {
     "format": "{icon} ",
     "format-icons": {
@@ -39,7 +37,6 @@
       "*": [1, 2],
     },
   },
-
   "idle_inhibitor": {
     "format": "<span font='12'>{icon} </span>",
     "format-icons": {
@@ -47,7 +44,6 @@
       "deactivated": "󰈉",
     },
   },
-
   "clock": {
     "format": "{:%H:%M:%S}",
     "interval": 1,
@@ -58,7 +54,6 @@
     "format-calendar-weeks": "<span color='#aeaeae'><b>W{:%V}</b></span>",
     "format-calendar-weekdays": "<span color='#aeaeae'><b>{}</b></span>",
   },
-
   "bluetooth": {
     "format-on": "",
     "format-off": "",
@@ -71,7 +66,6 @@
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
     "on-click": "rofi-bluetooth",
   },
-
   "network": {
     "format-wifi": " ",
     "format-ethernet": " ",
@@ -113,13 +107,11 @@
     "format-alt": "{time} {icon}",
     "format-icons": ["󰁻", "󰁼", "󰁾", "󰂀", "󰂂", "󰁹"],
   },
-
   "disk": {
     "interval": 30,
     "format": "  {percentage_used}%",
     "path": "/",
   },
-
   "custom/colorpicker": {
     "format": "{}",
     "return-type": "json",
@@ -128,7 +120,6 @@
     "on-click": "sleep 1 && ~/.config/waybar/scripts/colorpicker.sh",
     "signal": 1,
   },
-
   "cpu": {
     "interval": 1,
     "format": " {usage}%",
@@ -136,11 +127,9 @@
     "max-length": 6,
     "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
   },
-
   "memory": {
     "format": " {percentage}%",
   },
-
   "hyprland/window": {
     "format": "( {class} )",
     "rewrite": {
@@ -148,7 +137,6 @@
       "(.*) - zsh": "> [$1]",
     },
   },
-
   "temperature": {
     "format": " {temperatureC}°C",
     "format-critical": " {temperatureC}°C",
@@ -156,7 +144,6 @@
     "critical-threshold": 80,
     "on-click": "alacritty -e btop",
   },
-
   "pulseaudio": {
     "format": "{volume}% {icon}",
     "format-bluetooth": "󰂰",
@@ -176,19 +163,16 @@
     "on-click": "pavucontrol",
     "tooltip-format": "{icon}  {volume}%",
   },
-
   "jack": {
     "format": "{} 󱎔",
     "format-xrun": "{xruns} xruns",
     "format-disconnected": "DSP off",
     "realtime": true,
   },
-
   "tray": {
     "icon-size": 14,
     "spacing": 10,
   },
-
   "upower": {
     "show-icon": false,
     "hide-if-empty": true,
