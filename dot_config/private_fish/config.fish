@@ -25,7 +25,6 @@ if status is-interactive
 	export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
 	export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 	export GOPATH="$XDG_DATA_HOME"/go
-	export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 	export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
 	export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 
