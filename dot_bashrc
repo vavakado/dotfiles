@@ -20,9 +20,13 @@ eval "$(starship init bash)"
 eval "$(fzf --bash)"
 
 export PATH=$HOME/.cargo/bin/:$HOME/.local/bin:$PATH:/home/vavakado/.spicetify
-. "$HOME/.asdf/asdf.sh"
-. "$HOME/.asdf/completions/asdf.bash"
+#. "$HOME/.asdf/asdf.sh"
+#. "$HOME/.asdf/completions/asdf.bash"
 
 export YDOTOOL_SOCKET=/tmp/.ydotool_socket
 
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
+
+dotenv() {
+	export $(grep -v '^#' .env | xargs)
+}
