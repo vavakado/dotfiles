@@ -25,8 +25,6 @@ export PATH=$HOME/.cargo/bin/:$HOME/.local/bin:$PATH:/home/vavakado/.spicetify
 
 export YDOTOOL_SOCKET=/tmp/.ydotool_socket
 
-export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
-
 dotenv() {
 	export $(grep -v '^#' .env | xargs)
 }
