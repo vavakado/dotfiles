@@ -9,11 +9,11 @@
 		"min-length": 5,
 	},
 	"clock#time": {
-		"format": "<span color=\"#8da101\"> </span>{:%H:%M:%S}",
+		"format": "<span color=\"#bb9af7\"> </span>{:%H:%M:%S}",
 		"interval": 1,
 	},
 	"clock#date": {
-		"format": "<span color=\"#8da101\"> </span>{:%d/%m/%Y}",
+		"format": "<span color=\"#bb9af7\"> </span>{:%d/%m/%Y}",
 		"tooltip-format": "<tt>{calendar}</tt>",
 		"interval": 360,
 		"calendar": {
@@ -42,30 +42,30 @@
 		"format-icons": [
 			"<span color=\"#f7768e\"> </span>",
 			"<span color=\"#f7768e\"> </span>",
-			"<span color=\"#8da101\"> </span>",
-			"<span color=\"#8da101\"> </span>",
-			"<span color=\"#8da101\"> </span>",
+			"<span color=\"#bb9af7\"> </span>",
+			"<span color=\"#bb9af7\"> </span>",
+			"<span color=\"#bb9af7\"> </span>",
 		],
 		"format-charging": "<span color=\"#e0af68\">󱐌</span> {capacity}%",
 	},
 	"cpu": {
-		"format": "<span color=\"#8da101\"> </span>{usage}%",
+		"format": "<span color=\"#bb9af7\"> </span>{usage}%",
 		"interval": 4,
 	},
 	"memory": {
-		"format": "<span color=\"#8da101\"> </span>{used}GiB",
+		"format": "<span color=\"#bb9af7\"> </span>{used}GiB",
 		"interval": 4,
 	},
 	"temperature": {
 		"hwmon-path": "/sys/class/hwmon/hwmon6/temp1_input",
 		"critical-threshold": 80,
-		"format": "<span color=\"#8da101\"> </span>{temperatureC}°C",
+		"format": "<span color=\"#bb9af7\"> </span>{temperatureC}°C",
 		"format-critical": "<span color=\"#f7768e\"> </span>{temperatureC}°C",
 		"interval": 4,
 	},
 	"wireplumber": {
 		"scroll-step": 5, // %, can be a float
-		"format": "<span color=\"#8da101\">{icon} </span>{volume}%",
+		"format": "<span color=\"#bb9af7\">{icon} </span>{volume}%",
 		"format-muted": "<span color=\"#f7768e\"> </span>Muted",
 		"format-icons": [
 			"",
