@@ -19,7 +19,7 @@ eval "$(zoxide init bash)"
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
 
-export PATH=$HOME/.cargo/bin/:$HOME/.local/bin:$PATH:/home/vavakado/.spicetify
+export PATH=$HOME/.config/emacs/bin/:$HOME/.cargo/bin/:$HOME/.local/bin:$PATH:/home/vavakado/.spicetify
 #. "$HOME/.asdf/asdf.sh"
 #. "$HOME/.asdf/completions/asdf.bash"
 
@@ -27,4 +27,9 @@ export YDOTOOL_SOCKET=/tmp/.ydotool_socket
 
 dotenv() {
 	export $(grep -v '^#' .env | xargs)
+}
+
+
+calc() {
+    echo "scale=4; $*" | bc -l
 }
