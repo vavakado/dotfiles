@@ -3,13 +3,29 @@
 )
 
 (defsrc
-	caps esc lctl
+	caps esc lctl lalt
+  a s d f g h j k l ;
 )
 
 (defalias
 	cap (tap-hold-press 200 200 esc lctl)
+	a (tap-hold $tap-timeout $hold-timeout a lmet)
+	s (tap-hold $tap-timeout $hold-timeout s lalt)
+	d (tap-hold $tap-timeout $hold-timeout d lctl)
+	f (tap-hold $tap-timeout $hold-timeout f lsft)
+	
+	j (tap-hold $tap-timeout $hold-timeout j rsft)
+	k (tap-hold $tap-timeout $hold-timeout k rctl)
+	l (tap-hold $tap-timeout $hold-timeout l lalt)
+	; (tap-hold $tap-timeout $hold-timeout ; rmet)
+)
+
+(defvar
+  tap-timeout 200
+  hold-timeout 210
 )
 
 (deflayer default
-  @cap   caps    f13
+  esc   caps    f14 esc
+  @a @s @d @f g h @j @k @l @;
 )
