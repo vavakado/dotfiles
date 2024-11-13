@@ -259,7 +259,8 @@ disabled = false
 bash_indicator = '\$_'
 # fish_indicator = "" # Empty string as Fish Shell is my default shell
 fish_indicator = "⋖⋗⋖" # if Fish Shell is not the default shell
-zsh_indicator = "%_"
+# zsh_indicator = "%_"
+zsh_indicator = ""
 powershell_indicator = "" # nf-seti-powershell
 ion_indicator = '(\$_)'
 elvish_indicator = "󰘧" # nf-md-lambda
@@ -961,6 +962,7 @@ unknown_msg = '[ ](bg:color_shellix fg:color_base_red)' # nf-weather-na
 format = '[$symbol$name]($style)[\($state\)](bg:color_shellix fg:color_directory_repo_before)'
 
 
+
 ###  Information section 2
 [localip]
 # disabled = false
@@ -969,15 +971,15 @@ style = "bg:color_background_base fg:color_base_orange"
 format = "[ 󰩠 $localipv4]($style)" # 󰩠 = nf-md-ip_network
 
 [cmd_duration]
-disabled = true
+disabled = false
 style = "bg:color_background_base fg:color_base_yellow"
-show_milliseconds = true
+show_milliseconds = false
 # show_notifications = true
 # notification_timeout = 60000
 format = "[ 󰔛 $duration]($style)"
 
 [shlvl]
-disabled = false
+disabled = true
 symbol = " " # nf-fa-level_up
 style = "bold bg:color_shell_level fg:color_shell_level_text"
 # repeat = true
@@ -993,7 +995,7 @@ style = "bold bg:color_background_base fg:color_base_orange"
 format = "[$symbol$number]($style)"
 
 [sudo]
-disabled = false
+disabled = true
 symbol = " 󱫖 " # nf-md-timer_lock_open_outline
 style = "bg:color_sudo fg:color_sudo_text"
 # allow_windows = true
