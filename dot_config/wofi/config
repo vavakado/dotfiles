@@ -1,7 +1,7 @@
-term=footclient
+term=kitty
 #location=top
 #yoffset=180
-width=22%
+width=800
 #lines=11
 
 prompt=

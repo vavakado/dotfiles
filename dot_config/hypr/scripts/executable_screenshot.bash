@@ -2,4 +2,4 @@
 
 FILENAME=$(date -u +%Y-%m-%dT%H:%M:%S)
 
-grim ~/Screenshots/"$FILENAME".png && wl-copy -t image/png < ~/Screenshots/"$FILENAME".png
+grim ~/Pictures/Screenshots/"$FILENAME".png && wl-copy -t image/png < ~/Pictures/Screenshots/"$FILENAME".png
