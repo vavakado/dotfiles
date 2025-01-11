@@ -6,7 +6,7 @@
 
 ### Generic prompt configurations
 scan_timeout = 30 # default = 30
-command_timeout = 500 # default = 500
+command_timeout = 700 # default = 500
 add_newline = false # Don't print a new line before the start of the prompt
 continuation_prompt = "[](bg:color_background_base fg:color_base_orange)[](fg:color_background_base)"
 palette = "myth-orange-dark" # select the color palette to be used

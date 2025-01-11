@@ -12,7 +12,7 @@ else
     dir="$1"
 fi
 
-BG="$(find "$dir" -maxdepth 1 -name '*.jpg' -o -name '*.png' | shuf -n1)"
+BG="$(find "$dir" -maxdepth 1 -name '*.jpg' -o -name '*.png' | sort -R | head -n 1)"
 
 #trans_type="wipe"
 trans_type="fade"
