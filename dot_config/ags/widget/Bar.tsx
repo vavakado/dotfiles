@@ -1,5 +1,5 @@
 import { App } from "astal/gtk3";
-import { Variable, GLib, bind } from "astal";
+import { Variable, GLib, bind, Process } from "astal";
 import { Astal, Gtk, Gdk } from "astal/gtk3";
 import Hyprland from "gi://AstalHyprland";
 import Mpris from "gi://AstalMpris";
@@ -128,7 +128,10 @@ function Workspaces() {
 }
 
 function truncateString(str: string, n: number) {
-  return str.length > n ? str.slice(0, n - 3) + "..." : str;
+  // TODO: strip \n
+  let nstr = str.replace(/\n/g, " ");
+
+  return nstr.length > n ? nstr.slice(0, n - 3) + "..." : nstr;
 }
 
 function FocusedClient() {
@@ -162,6 +165,20 @@ function Time({ format = "%H:%M:%S - %b %d" }) {
   );
 }
 
+function NextEvent() {
+  const event = Variable<string>("").poll(60000, () =>
+    Process.execv(["whenst", "next", "-tn"]),
+  );
+
+  return (
+    <label
+      className="NextEvent"
+      onDestroy={() => event.drop()}
+      label={event()}
+    />
+  );
+}
+
 export default function Bar(monitor: Gdk.Monitor) {
   const anchor =
     Astal.WindowAnchor.TOP | Astal.WindowAnchor.LEFT | Astal.WindowAnchor.RIGHT;
@@ -179,6 +196,8 @@ export default function Bar(monitor: Gdk.Monitor) {
           <FocusedClient />
         </box>
         <box>
+          <NextEvent />
+          <label className="Spacer" label=" |  " />
           <Media />
         </box>
         <box hexpand halign={Gtk.Align.END}>

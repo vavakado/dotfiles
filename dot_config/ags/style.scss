@@ -10,7 +10,7 @@ window.Bar {
   box-shadow: none;
   background-color: #21222399;
   color: $fg;
-  font-size: 1.1em;
+  font-size: 0.9em;
   font-weight: bold;
   margin: 0 1em;
 
@@ -30,7 +30,7 @@ window.Bar {
 
   label {
     transition: 200ms;
-    padding: 0 8px;
+    padding: 0 4px;
     margin: 2px;
     border-radius: $radius;
     border: 1pt solid transparent;

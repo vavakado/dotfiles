@@ -17,3 +17,4 @@ BG="$(find "$dir" -maxdepth 1 -name '*.jpg' -o -name '*.png' | sort -R | head -n
 #trans_type="wipe"
 trans_type="fade"
 swww img "$BG" --transition-fps 75 --transition-type $trans_type --transition-duration 2.5 --resize crop
+notify-send "Wallpaper changed" --icon="$BG" --expire-time=10000
