@@ -1,14 +1,14 @@
 @use "sass:color";
 @use "./widget/AppLauncher.scss";
 $bg: #212223;
-$fg: #f1f1f1;
-$accent: #378df7;
-$radius: 7px;
+$fg: #000000;
+$accent: #53009b;
+$radius: 0px;
 
 window.Bar {
   border: none;
   box-shadow: none;
-  background-color: #21222399;
+  background-color: #00000000;
   color: $fg;
   font-size: 0.9em;
   font-weight: bold;
@@ -58,7 +58,8 @@ window.Bar {
     margin-left: 0;
   }
 
-  .Logo {}
+  .Logo {
+  }
 
   .AudioSlider {
     * {

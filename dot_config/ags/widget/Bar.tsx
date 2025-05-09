@@ -6,6 +6,23 @@ import Mpris from "gi://AstalMpris";
 import Wp from "gi://AstalWp";
 import Tray from "gi://AstalTray";
 
+const greekLetters = {
+	1: "α",
+	2: "β",
+	3: "γ",
+	4: "δ",
+	5: "ε",
+	6: "ζ",
+	7: "η",
+	8: "θ",
+	9: "ι",
+	10: "κ",
+};
+
+function getGreekLetter(number: string | number) {
+	return greekLetters[number];
+}
+
 function SysTray() {
 	const tray = Tray.get_default();
 
@@ -34,12 +51,12 @@ function AudioSlider() {
 	const speaker = Wp.get_default()?.audio.defaultSpeaker!;
 
 	return (
-		<box className="AudioSlider" css="min-width: 140px">
+		<box className="AudioSlider">
 			<icon icon={bind(speaker, "volumeIcon")} />
-			<slider
-				hexpand
-				onDragged={({ value }) => (speaker.volume = value)}
-				value={bind(speaker, "volume")}
+			<label
+				label={bind(speaker, "volume").as(
+					() => `${(speaker.volume * 100).toFixed(0)}%`,
+				)}
 			/>
 		</box>
 	);
@@ -94,10 +111,10 @@ function KeyboardLayout() {
 
 function getKeyboardLayoutIcon(layout: string) {
 	const layoutMap: { [key: string]: string } = {
-		"English (Colemak)": "🇺🇸Col",
-		"English (US)": "🇺🇸",
-		Russian: "🇷🇺",
-		Hebrew: "🇮🇱",
+		"English (Colemak)": "CL",
+		"English (US)": "US",
+		Russian: "RU",
+		Hebrew: "HE",
 	};
 
 	return layoutMap[layout] || layout;
@@ -119,7 +136,7 @@ function Workspaces() {
 							)}
 							onClicked={() => ws.focus()}
 						>
-							{ws.id}
+							{getGreekLetter(ws.id)}
 						</button>
 					)),
 			)}
@@ -154,7 +171,7 @@ function FocusedClient() {
 	);
 }
 
-function Time({ format = "%H:%M - %b %d" }) {
+function Time({ format = "%H:%M | %m/%d" }) {
 	const time = Variable<string>("").poll(
 		1000,
 		() => GLib.DateTime.new_now_local().format(format)!,
@@ -181,7 +198,9 @@ function NextEvent() {
 
 export default function Bar(monitor: Gdk.Monitor) {
 	const anchor =
-		Astal.WindowAnchor.TOP | Astal.WindowAnchor.LEFT | Astal.WindowAnchor.RIGHT;
+		Astal.WindowAnchor.BOTTOM |
+		Astal.WindowAnchor.LEFT |
+		Astal.WindowAnchor.RIGHT;
 
 	return (
 		<window
@@ -192,14 +211,11 @@ export default function Bar(monitor: Gdk.Monitor) {
 		>
 			<centerbox>
 				<box hexpand halign={Gtk.Align.START}>
-					<label className="Logo" label="󱄅" />
 					<Workspaces />
-					<FocusedClient />
+					<NextEvent />
 				</box>
 				<box>
-					<NextEvent />
-					<label className="Spacer" label=" |  " />
-					<Media />
+					<FocusedClient />
 				</box>
 				<box hexpand halign={Gtk.Align.END}>
 					<SysTray />
@@ -209,5 +225,6 @@ export default function Bar(monitor: Gdk.Monitor) {
 				</box>
 			</centerbox>
 		</window>
-	);
-}
+  ); 
+} 
+ 

@@ -1,0 +1,9 @@
+gamma_backend = "none"
+disable_timeout = 10
+[gamma]
+day = 100
+night = 1
+
+[temp]
+day = 6500
+night = 2700
