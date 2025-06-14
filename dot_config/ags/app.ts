@@ -1,7 +1,7 @@
 import { App } from "astal/gtk3";
 import style from "./style.scss";
 import Bar from "./widget/Bar";
-import AppLauncher from "./widget/AppLauncher";
+import DesktopQuote from "./widget/DesktopQuote";
 
 App.start({
   css: style,
@@ -12,6 +12,6 @@ App.start({
   },
   main() {
     App.get_monitors().map(Bar);
-    // AppLauncher();
+    App.get_monitors().map(DesktopQuote);
   },
 });

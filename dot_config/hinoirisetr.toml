@@ -1,9 +1,16 @@
-gamma_backend = "none"
+gamma_backend = "ddcutil"
 disable_timeout = 10
+[time]
+interpolation_temp = "cubic"
+interpolation_gamma = "linear"
+sunset_start = 19
+sunset_end = 23
+sunrise_start = 4
+sunrise_end = 7
 [gamma]
 day = 100
 night = 1
 
 [temp]
 day = 6500
-night = 2700
+night = 2000
