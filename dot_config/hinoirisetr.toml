@@ -1,16 +1,17 @@
 gamma_backend = "ddcutil"
+temp_backend = "hyprctl"
 disable_timeout = 10
 [time]
 interpolation_temp = "cubic"
 interpolation_gamma = "linear"
-sunset_start = 19
-sunset_end = 23
-sunrise_start = 4
-sunrise_end = 7
+sunset_start = 19:00
+sunset_end = 22:30
+sunrise_start = 5:20
+sunrise_end = 7:40
 [gamma]
 day = 100
 night = 1
 
 [temp]
 day = 6500
-night = 2000
+night = 2300
